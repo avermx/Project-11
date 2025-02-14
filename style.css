@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+main .view-1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+}
+main .view-1 .part {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view-1 .part h1 {
+  font-size: 2.6rem;
+}
+main .view-1 .part h1 span {
+  opacity: 0.5;
+}
+main .view-1 .part-2 .images {
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c " "a a c c";
+}
+main .view-1 .part-2 .images .class-a {
+  grid-area: a;
+}
+main .view-1 .part-2 .images .class-a img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-1 .part-2 .images .class-b {
+  grid-area: b;
+}
+main .view-1 .part-2 .images .class-b img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-1 .part-2 .images .class-c {
+  grid-area: c;
+}
+main .view-1 .part-2 .images .class-c img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1020px) {
+  main .view-1 {
+    flex-direction: row;
+  }
+  main .view-1 .part {
+    width: 50%;
+  }
+  main .view-1 .part h1 {
+    margin-top: 5rem;
+    width: 90%;
+    font-size: 5rem;
+  }
+  main .view-1 .part p {
+    font-size: 1.5rem;
+  }
+  main .view-1 .part-2 {
+    width: 50%;
+  }
+  main .view-1 .part-2 .images {
+    gap: 2rem;
+    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c " ". . c c";
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height:100%;
+    padding: 1rem;
+
+
+    .view-1 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        gap: 1rem;
+        .part {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            h1 {
+                font-size: 2.6rem;
+
+                span {
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+        .part-2 {
+
+
+            .images {
+
+                display: grid;
+                gap: 0.8rem;
+                width:100%;
+                
+                grid-template-areas:
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a c c "
+                    "a a c c";
+
+                .class-a {
+
+                    grid-area: a;
+                   
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+
+                    }   
+                }
+
+                .class-b {
+
+
+                    grid-area: b;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }  
+                }
+
+                .class-c {
+                    
+                    grid-area: c;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+        }
+
+
+
+
+    }
+}
+
+
+@media (min-width: 1020px) {
+    main{
+        .view-1{
+            flex-direction: row;
+
+            .part{
+                width: 50%;
+
+                h1{
+                    margin-top: 5rem;
+                    width: 90%;
+                    font-size: 5rem;
+ 
+                    
+                }
+
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+
+            .part-2{
+
+
+                width: 50%;
+
+                .images{
+
+                    gap: 2rem;
+                    grid-template-areas:
+                    ". . b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a b b"
+                    "a a c c "
+                    ". . c c";
+                }
+            }
+        }
+    }
+
+}
